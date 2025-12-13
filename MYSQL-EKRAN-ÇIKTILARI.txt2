@@ -1,0 +1,397 @@
+23-) VERİ EKLEME
++------------+------------+---------------+---------------------------+----------+-------------+
+| ogrenci_id | ogrenci_ad | ogrenci_soyad | ogrenci_email             | bolum_id | danisman_id |
++------------+------------+---------------+---------------------------+----------+-------------+
+|       2000 | Ali        | Kece          | ali.kece@example.com      |        3 |        1002 |
+|       2001 | Deniz      | Arslan        | deniz.arslan@example.com  |        1 |        1001 |
+|       2002 | Ege        | Baran         | ege.baran@example.com     |        1 |        1002 |
+|       2003 | Lara       | Çakır         | lara.cakir@example.com    |        2 |        1003 |
+|       2004 | Emir       | Duman         | emir.duman@example.com    |        2 |        1003 |
+|       2005 | Selma      | Erdoğan       | selma.erdogan@example.com |        3 |        1004 |
+|       2006 | Baran      | Fidan         | baran.fidan@example.com   |        1 |        1001 |
+|       2007 | Derya      | Güneş         | derya.gunes@example.com   |        3 |        1004 |
+|       2008 | Kerem      | Hazar         | kerem.hazar@example.com   |        2 |        1003 |
++------------+------------+---------------+---------------------------+----------+-------------+
+
+
+
+24-)
+VERİ SİLME
+
+yeni tablolar
++------------+---------+------+-------+------+-------+
+| ogrenci_id | ders_id | yil  | donem | vize | final |
++------------+---------+------+-------+------+-------+
+|       2001 |     302 | 2025 | Bahar |   80 |    90 |
+|       2002 |     306 | 2025 | Güz   |   88 |    92 |
+|       2003 |     303 | 2025 | Güz   |   65 |    70 |
+|       2003 |     304 | 2025 | Bahar |   72 |    76 |
+|       2004 |     304 | 2025 | Bahar |   75 |    80 |
+|       2004 |     305 | 2025 | Güz   |   60 |    68 |
+|       2005 |     307 | 2025 | Bahar |   85 |    90 |
+|       2006 |     302 | 2025 | Güz   |   78 |    82 |
+|       2006 |     306 | 2025 | Bahar |   88 |    91 |
+|       2007 |     307 | 2025 | Güz   |   70 |    75 |
+|       2008 |     303 | 2025 | Bahar |   82 |    86 |
+|       2008 |     305 | 2025 | Güz   |   77 |    80 |
++------------+---------+------+-------+------+-------+
++---------+--------------------------+-------+------+-------------+----------+
+| ders_id | ders_ad                  | kredi | akts | ogretmen_id | bolum_id |
++---------+--------------------------+-------+------+-------------+----------+
+|     302 | Algoritma ve Programlama |     3 |    5 |        1002 |        1 |
+|     303 | Matematik I              |     4 |    6 |        1003 |        2 |
+|     304 | Fizik I                  |     3 |    4 |        1003 |        2 |
+|     305 | Elektrik Devreleri       |     4 |    6 |        1003 |        2 |
+|     306 | Yazılım Mühendisliği     |     3 |    5 |        1002 |        1 |
+|     307 | Makine Elemanları        |     4 |    6 |        1004 |        3 |
+|     308 | Robotik ve Otomasyon     |     3 |    5 |        1004 |        3 |
++---------+--------------------------+-------+------+-------------+----------+
+
+
+25-)
++------------+---------+------+-------+------+-------+
+| ogrenci_id | ders_id | yil  | donem | vize | final |
++------------+---------+------+-------+------+-------+
+|       2001 |     301 | 2025 | Güz   |   75 |    90 |
+|       2001 |     302 | 2025 | Bahar |   80 |    95 |
+|       2002 |     301 | 2025 | Bahar |   70 |    93 |
+|       2002 |     306 | 2025 | Güz   |   88 |    92 |
+|       2003 |     303 | 2025 | Güz   |   65 |    85 |
+|       2003 |     304 | 2025 | Bahar |   72 |    81 |
+|       2004 |     304 | 2025 | Bahar |   75 |    85 |
+|       2004 |     305 | 2025 | Güz   |   60 |    83 |
+|       2005 |     307 | 2025 | Bahar |   85 |    90 |
+|       2006 |     302 | 2025 | Güz   |   78 |    87 |
+|       2006 |     306 | 2025 | Bahar |   88 |    91 |
+|       2007 |     307 | 2025 | Güz   |   70 |    90 |
+|       2008 |     303 | 2025 | Bahar |   82 |    86 |
+|       2008 |     305 | 2025 | Güz   |   77 |    85 |
++------------+---------+------+-------+------+-------+
+
+
+1-)
++-------+--------------------------+----------+-------------+
+| kredi | ders_ad                  | bolum_id | dusuk_kredi |
++-------+--------------------------+----------+-------------+
+|     1 | Algoritma ve Programlama |        1 |           1 |
++-------+--------------------------+----------+-------------+
+
+
+2-)
++-------+------------+---------+-------+---------------+
+| final | ogrenci_id | ders_id | donem | en_yuksek_not |
++-------+------------+---------+-------+---------------+
+|    92 |       2002 |     306 | Güz   |            92 |
++-------+------------+---------+-------+---------------+
+
+
+3-)
++------------+---------------+-------------+----------+
+| ogrenci_ad | ogrenci_soyad | danisman_id | bolum_id |
++------------+---------------+-------------+----------+
+| Selma      | Erdoğan       |        1004 |        3 |
+| Emir       | Duman         |        1003 |        2 |
+| Deniz      | Arslan        |        1001 |        1 |
+| Baran      | Fidan         |        1001 |        1 |
+| Ege        | Baran         |        1002 |        1 |
++------------+---------------+-------------+----------+
+
+4-)
++-------------+----------------+
+| ogretmen_ad | ogretmen_soyad |
++-------------+----------------+
+| Hüseyin     | Işık           |
+| Ayşegül     | Kaya           |
++-------------+----------------+
+
+
+5-)
++-------------+----------------+
+| danisman_id | ogrenci_sayisi |
++-------------+----------------+
+|        1001 |              2 |
+|        1003 |              3 |
+|        1004 |              2 |
++-------------+----------------+
+
+
+
+6-)
+| ders_ad                  | yüksek_akts |
++--------------------------+------------+
+| Veri Tabanı Yönetimi     |          6 |
+| Algoritma ve Programlama |          5 |
+| Matematik I              |          6 |
+| Elektrik Devreleri       |          6 |
+| Yazılım Mühendisliği     |          5 |
+| Makine Elemanları        |          6 |
+| Robotik ve Otomasyon     |          5 |
++--------------------------+------------+
+
+7-)
++------------+--------------+
+| ogrenci_id | ortalama_not |
++------------+--------------+
+|       2001 |        82.50 |
+|       2002 |        82.00 |
+|       2003 |        70.75 |
+|       2004 |        70.75 |
+|       2005 |        87.50 |
+|       2006 |        84.75 |
+|       2007 |        72.50 |
+|       2008 |        81.25 |
++-----
+
+
+8-)
++--------------------------+-------+------+-----------------+--------+
+| ders_ad                  | kredi | akts | zorluk_derecesi | derece |
++--------------------------+-------+------+-----------------+--------+
+| Veri Tabanı Yönetimi     |     4 |    6 |             4.8 | Orta   |
+| Algoritma ve Programlama |     3 |    5 |             3.8 | Orta   |
+| Matematik I              |     4 |    6 |             4.8 | Orta   |
+| Fizik I                  |     3 |    4 |             3.4 | Orta   |
+| Elektrik Devreleri       |     4 |    6 |             4.8 | Orta   |
+| Yazılım Mühendisliği     |     3 |    5 |             3.8 | Orta   |
+| Makine Elemanları        |     4 |    6 |             4.8 | Orta   |
+| Robotik ve Otomasyon     |     3 |    5 |             3.8 | Orta   |
++--------------------------+-------+------+-----------------+--------+
+
+9-)
++------------+---------------+------------+---------------------------+
+| ogrenci_ad | ogrenci_soyad | ogrenci_id | ogrenci_email             |
++------------+---------------+------------+---------------------------+
+| Emir       | Duman         |       2004 | emir.duman@example.com    |
+| Kerem      | Hazar         |       2008 | kerem.hazar@example.com   |
+| Selma      | Erdoğan       |       2005 | selma.erdogan@example.com |
+| Derya      | Güneş         |       2007 | derya.gunes@example.com   |
++------------+---------------+------------+---------------------------+
+
+
+10-)
++------------+---------------+
+| ogrenci_ad | ogrenci_soyad |
++------------+---------------+
+| Deniz      | Arslan        |
+| Ege        | Baran         |
+| Selma      | Erdoğan       |
+| Baran      | Fidan         |
+| Kerem      | Hazar         |
++------------+---------------+
+
+
+11-)
++-------------+----------------+
+| ogretmen_ad | ogretmen_soyad |
++-------------+----------------+
+| Mustafa     | Lale           |
++-------------+----------------+
+
+12-)
++------------+---------------+------+-------+-------+
+| ogrenci_ad | ogrenci_soyad | vize | final | donem |
++------------+---------------+------+-------+-------+
+| Deniz      | Arslan        |   75 |    85 | Güz   |
+| Deniz      | Arslan        |   80 |    90 | Bahar |
+| Ege        | Baran         |   70 |    78 | Bahar |
+| Ege        | Baran         |   88 |    92 | Güz   |
+| Lara       | Çakır         |   65 |    70 | Güz   |
+| Lara       | Çakır         |   72 |    76 | Bahar |
+| Emir       | Duman         |   75 |    80 | Bahar |
+| Emir       | Duman         |   60 |    68 | Güz   |
+| Selma      | Erdoğan       |   85 |    90 | Bahar |
+| Baran      | Fidan         |   78 |    82 | Güz   |
+| Baran      | Fidan         |   88 |    91 | Bahar |
+| Derya      | Güneş         |   70 |    75 | Güz   |
+| Kerem      | Hazar         |   82 |    86 | Bahar |
+| Kerem      | Hazar         |   77 |    80 | Güz   |
++------------+---------------+------+-------+-------+
+
+13-)
++------------+---------------+--------------------------+-------+------+------------------------------------+
+| ogrenci_ad | ogrenci_soyad | ders_ad                  | kredi | akts | bolum_ad                           |
++------------+---------------+--------------------------+-------+------+------------------------------------+
+| Deniz      | Arslan        | Veri Tabanı Yönetimi     |     4 |    6 | Bilgisayar Mühendisliği            |
+| Deniz      | Arslan        | Algoritma ve Programlama |     3 |    5 | Bilgisayar Mühendisliği            |
+| Deniz      | Arslan        | Yazılım Mühendisliği     |     3 |    5 | Bilgisayar Mühendisliği            |
+| Ege        | Baran         | Veri Tabanı Yönetimi     |     4 |    6 | Bilgisayar Mühendisliği            |
+| Ege        | Baran         | Algoritma ve Programlama |     3 |    5 | Bilgisayar Mühendisliği            |
+| Ege        | Baran         | Yazılım Mühendisliği     |     3 |    5 | Bilgisayar Mühendisliği            |
+| Baran      | Fidan         | Veri Tabanı Yönetimi     |     4 |    6 | Bilgisayar Mühendisliği            |
+| Baran      | Fidan         | Algoritma ve Programlama |     3 |    5 | Bilgisayar Mühendisliği            |
+| Baran      | Fidan         | Yazılım Mühendisliği     |     3 |    5 | Bilgisayar Mühendisliği            |
+| Lara       | Çakır         | Matematik I              |     4 |    6 | Elektrik-Elektronik Mühendisliği   |
+| Lara       | Çakır         | Fizik I                  |     3 |    4 | Elektrik-Elektronik Mühendisliği   |
+| Lara       | Çakır         | Elektrik Devreleri       |     4 |    6 | Elektrik-Elektronik Mühendisliği   |
+| Emir       | Duman         | Matematik I              |     4 |    6 | Elektrik-Elektronik Mühendisliği   |
+| Emir       | Duman         | Fizik I                  |     3 |    4 | Elektrik-Elektronik Mühendisliği   |
+| Emir       | Duman         | Elektrik Devreleri       |     4 |    6 | Elektrik-Elektronik Mühendisliği   |
+| Kerem      | Hazar         | Matematik I              |     4 |    6 | Elektrik-Elektronik Mühendisliği   |
+| Kerem      | Hazar         | Fizik I                  |     3 |    4 | Elektrik-Elektronik Mühendisliği   |
+| Kerem      | Hazar         | Elektrik Devreleri       |     4 |    6 | Elektrik-Elektronik Mühendisliği   |
+| Selma      | Erdoğan       | Makine Elemanları        |     4 |    6 | Makine Mühendisliği                |
+| Selma      | Erdoğan       | Robotik ve Otomasyon     |     3 |    5 | Makine Mühendisliği                |
+| Derya      | Güneş         | Makine Elemanları        |     4 |    6 | Makine Mühendisliği                |
+| Derya      | Güneş         | Robotik ve Otomasyon     |     3 |    5 | Makine Mühendisliği                |
++------------+---------------+--------------------------+-------+------+-----------------------------------
+
+
+14-)
++-------------+--------------------------+----------+
+| ogretmen_ad | ogretmen_email           | bolum_id |
++-------------+--------------------------+----------+
+| Ayşegül     | aysegul.kaya@example.com |        1 |
++-------------+--------------------------+----------+
+
+
+
+15-)
++---------+--------------------------+-------+------+-------------+----------+
+| ders_id | ders_ad                  | kredi | akts | ogretmen_id | bolum_id |
++---------+--------------------------+-------+------+-------------+----------+
+|     301 | Veri Tabanı Yönetimi     |     4 |    6 |        1001 |        1 |
+|     302 | Algoritma ve Programlama |     3 |    5 |        1002 |        1 |
+|     303 | Matematik I              |     4 |    6 |        1003 |        2 |
+|     304 | Fizik I                  |     3 |    4 |        1003 |        2 |
+|     305 | Elektrik Devreleri       |     4 |    6 |        1003 |        2 |
+|     306 | Yazılım Mühendisliği     |     3 |    5 |        1002 |        1 |
+|     307 | Makine Elemanları        |     4 |    6 |        1004 |        3 |
+|     308 | Robotik ve Otomasyon     |     3 |    5 |        1004 |        3 |
+|     309 | veri yapilari            |     3 |    5 |        1001 |        1 |
++---------+--------------------------+-------+------+-------------+----------+
+
+
+16-)
++------------+---------------+--------------------------+------+-------+
+| ogrenci_ad | ogrenci_soyad | ders_ad                  | vize | final |
++------------+---------------+--------------------------+------+-------+
+| Deniz      | Arslan        | Veri Tabanı Yönetimi     |   75 |    85 |
+| Deniz      | Arslan        | Algoritma ve Programlama |   80 |    90 |
+| Ege        | Baran         | Veri Tabanı Yönetimi     |   70 |    78 |
+| Ege        | Baran         | Yazılım Mühendisliği     |   88 |    92 |
+| Lara       | Çakır         | Matematik I              |   65 |    70 |
+| Lara       | Çakır         | Fizik I                  |   72 |    76 |
+| Emir       | Duman         | Fizik I                  |   75 |    80 |
+| Emir       | Duman         | Elektrik Devreleri       |   60 |    68 |
+| Selma      | Erdoğan       | Makine Elemanları        |   85 |    90 |
+| Baran      | Fidan         | Algoritma ve Programlama |   78 |    82 |
+| Baran      | Fidan         | Yazılım Mühendisliği     |   88 |    91 |
+| Derya      | Güneş         | Makine Elemanları        |   70 |    75 |
+| Kerem      | Hazar         | Matematik I              |   82 |    86 |
+| Kerem      | Hazar         | Elektrik Devreleri       |   77 |    80 |
++------------+---------------+--------------------------+------+-------+
+
+
+ 17-)
+ERROR 1644 (45000) at line 124: Akts en az 3 olmalidir //ROLLBACK çalışıyor.
+
+
+
+
+18-)
+ERROR 1644 (45000) at line 134: Geçersiz vize veya final girilemez // ROLLBACK Çalışıyor.
+
+18-)
++------------+------+-------+----------+-----------+
+| ogrenci_id | vize | final | ortalama | harf_notu |
++------------+------+-------+----------+-----------+
+|       2001 |   75 |    85 |    81.00 | BB        |
+|       2001 |   80 |    90 |    86.00 | BB        |
+|       2002 |   70 |    78 |    74.80 | CC        |
+|       2002 |   88 |    92 |    90.40 | AA        |
+|       2003 |   65 |    70 |    68.00 | DD        |
+|       2003 |   72 |    76 |    74.40 | CC        |
+|       2004 |   75 |    80 |    78.00 | CC        |
+|       2004 |   60 |    68 |    64.80 | DD        |
+|       2005 |   85 |    90 |    88.00 | BB        |
+|       2006 |   78 |    82 |    80.40 | BB        |
+|       2006 |   88 |    91 |    89.80 | BB        |
+|       2007 |   70 |    75 |    73.00 | CC        |
+|       2008 |   82 |    86 |    84.40 | BB        |
+|       2008 |   77 |    80 |    78.80 | CC        |
++------------+------+-------+----------+-----------+
+
+
+
+19-)
++---------------------------+
+| mesaj                     |
++---------------------------+
+| Ogrenci basariyla eklendi |
++---------------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20-)
++--------+------------+------------+---------------------+-----------------------+
+| log_id | ogrenci_id | islem_tipi | islem_tarihi        | mesaj                 |
++--------+------------+------------+---------------------+-----------------------+
+|      1 |       2009 | INSERT     | 2025-12-08 15:28:49 | CengizÇoban eklendi.  |
++--------+------------+------------+---------------------+-----------------------+
++------------+------------+---------------+---------------------------+----------+-------------+
+| ogrenci_id | ogrenci_ad | ogrenci_soyad | ogrenci_email             | bolum_id | danisman_id |
++------------+------------+---------------+---------------------------+----------+-------------+
+|       2001 | Deniz      | Arslan        | deniz.arslan@example.com  |        1 |        1001 |
+|       2002 | Ege        | Baran         | ege.baran@example.com     |        1 |        1002 |
+|       2003 | Lara       | Çakır         | lara.cakir@example.com    |        2 |        1003 |
+|       2004 | Emir       | Duman         | emir.duman@example.com    |        2 |        1003 |
+|       2005 | Selma      | Erdoğan       | selma.erdogan@example.com |        3 |        1004 |
+|       2006 | Baran      | Fidan         | baran.fidan@example.com   |        1 |        1001 |
+|       2007 | Derya      | Güneş         | derya.gunes@example.com   |        3 |        1004 |
+|       2008 | Kerem      | Hazar         | kerem.hazar@example.com   |        2 |        1003 |
+|       2009 | Cengiz     | Çoban         | cengiz.çoban@example.com  |        1 |        1001 |
++------------+------------+---------------+---------------------------+----------+-------------+
+
+
+
+21-)
+
++--------+------------+------------+---------------------+-------------------------------+
+| log_id | ogrenci_id | islem_tipi | islem_tarihi        | mesaj                         |
++--------+------------+------------+---------------------+-------------------------------+
+|      1 |       2001 | UPDATE     | 2025-12-08 15:39:40 |  Cengiz  Çolak güncellendi.   |
++--------+------------+------------+---------------------+-------------------------------+
++------------+------------+---------------+---------------------------+----------+-------------+
+| ogrenci_id | ogrenci_ad | ogrenci_soyad | ogrenci_email             | bolum_id | danisman_id |
++------------+------------+---------------+---------------------------+----------+-------------+
+|       2001 | Cengiz     | Çolak         | deniz.arslan@example.com  |        1 |        1001 |
+|       2002 | Ege        | Baran         | ege.baran@example.com     |        1 |        1002 |
+|       2003 | Lara       | Çakır         | lara.cakir@example.com    |        2 |        1003 |
+|       2004 | Emir       | Duman         | emir.duman@example.com    |        2 |        1003 |
+|       2005 | Selma      | Erdoğan       | selma.erdogan@example.com |        3 |        1004 |
+|       2006 | Baran      | Fidan         | baran.fidan@example.com   |        1 |        1001 |
+|       2007 | Derya      | Güneş         | derya.gunes@example.com   |        3 |        1004 |
+|       2008 | Kerem      | Hazar         | kerem.hazar@example.com   |        2 |        1003 |
++------------+------------+---------------+---------------------------+----------+-------------+
+
+
+
+
+22-)
++--------+------------+------------+---------------------+-------------------------+
+| log_id | ogrenci_id | islem_tipi | islem_tarihi        | mesaj                   |
++--------+------------+------------+---------------------+-------------------------+
+|      1 |       2005 | DELETE     | 2025-12-08 15:44:11 | Selma Erdoğan silindi.  |
++--------+------------+------------+---------------------+-------------------------+
++------------+------------+---------------+--------------------------+----------+-------------+
+| ogrenci_id | ogrenci_ad | ogrenci_soyad | ogrenci_email            | bolum_id | danisman_id |
++------------+------------+---------------+--------------------------+----------+-------------+
+|       2001 | Deniz      | Arslan        | deniz.arslan@example.com |        1 |        1001 |
+|       2002 | Ege        | Baran         | ege.baran@example.com    |        1 |        1002 |
+|       2003 | Lara       | Çakır         | lara.cakir@example.com   |        2 |        1003 |
+|       2004 | Emir       | Duman         | emir.duman@example.com   |        2 |        1003 |
+|       2006 | Baran      | Fidan         | baran.fidan@example.com  |        1 |        1001 |
+|       2007 | Derya      | Güneş         | derya.gunes@example.com  |        3 |        1004 |
+|       2008 | Kerem      | Hazar         | kerem.hazar@example.com  |        2 |        1003 |
++------------+------------+---------------+--------------------------+----------+-------------+
